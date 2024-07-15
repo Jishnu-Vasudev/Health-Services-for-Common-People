@@ -31,7 +31,6 @@
 2. Diya Mathews : Front End, Nearby Hospitals, Nearby Pharmacies
 3. Nayana Anna Binu : Front End, Consult Doctor, Order Medicines
 4. Henok Anil Anton : Front End, Health Insurance, Translate
-5. 
 ## Conclusion
 - In conclusion, our project 'Integrated Common Services for Common People' has successfully created a unified platform, that streamlines access to essential health services. 
 Our team's collaborative efforts have resulted in a user-friendly web application that addresses the needs of individuals in a new environment.
