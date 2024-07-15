@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Medicine</title>
+</head>
+<body>
+    <h1 class="header">
+        Order Medicine
+    </h1>
+    <a id="back">Back</a>
+    <main>
+        <section class="description">
+            <p>Welcome to our Order Medicine page. Here you can find various online services that allow you to order medicines from your home itself.</p>
+        </section>
+        <section class="links">
+            <h2 class = "labelH">Online Medicine Ordering Services</h2>
+            <table>
+                <tr>
+                    <th>Service</th>
+                    <th>Link</th>
+                </tr>
+                <tr>
+                    <td>Tata 1mg</td>
+                    <td><a href="https://www.1mg.com/" target="_blank" onclick="openInNewTab('https://www.1mg.com/')">Visit Tata 1mg</a></td>
+                </tr>
+                <tr>
+                    <td>PharmEasy</td>
+                    <td><a href="https://pharmeasy.in/online-medicine-order" target="_blank" onclick="openInNewTab('https://pharmeasy.in/online-medicine-order')">Visit PharmEasy</a></td>
+                </tr>
+                <tr>
+                    <td>Appolo Pharmacy</td>
+                    <td><a href="https://www.apollopharmacy.in/" target="_blank" onclick="openInNewTab('https://www.apollopharmacy.in/')">Visit Appolo Pharmacy</a></td>
+                </tr>
+                <tr>
+                    <td>Netmeds</td>
+                    <td><a href="https://www.netmeds.com/" target="_blank" onclick="openInNewTab('https://www.netmeds.com/')">Visit Netmeds</a></td>
+                </tr>
+            </table>
+        </section>
+    </main>
+</body>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        color: #333;
+    }
+    .header {
+        font-size: 40px;
+        text-align: center;
+        color: darkgoldenrod;
+    }
+    .description {
+        margin-left: 20px;
+        font-size: 20px;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 2rem;
+    }
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+    th {
+        background-color: #3c87e4;
+        color: white;
+    }
+    .labelH{
+        font-size: 25px;
+        font-family: 'Courier New', Courier, monospace;
+        text-align: center;
+        text-decoration: underline;
+        color: rgb(119, 111, 232);
+    }
+    #back{
+        margin-left: 20px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+</style>
+<script>
+    function openInNewTab(url) {
+        window.open(url);
+    }
+
+    // Get the username from the URL query parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    const username = urlParams.get('username');
+    backBut = document.getElementById("back");
+    chunk1 = "../next.html?username="
+    locat = chunk1 + username
+    backBut.href = locat;
+</script>
+</html>

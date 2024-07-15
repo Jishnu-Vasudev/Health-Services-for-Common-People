@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospitals Near Me</title>
+</head>
+<body>
+    <h1 class="heading">HOSPITAL SERVICES NEAR ME</h1>
+    <a id="back">Back</a>
+    <p class="content">
+        You will be able to see nearby hospitals of a location if you enter the location
+        in the provided textbox and press the enter key. Default location is Delhi, hence
+        refreshing causes the location to be Delhi.
+    </p>
+    <input type="text" class="Location" placeholder="Enter Location and press Enter">
+    <iframe id = "dynamicIFrame" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <iframe width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</body>
+<script>
+    var Location = document.querySelector(".Location");
+    Location.addEventListener("keydown",function(e){
+        if(e.keyCode == 13){
+            var location = Location.value;
+        }
+        urlChunk1 = "https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d17556611.073370297!2d71.74357356053582!3d21.97970985160278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1shospitals%20at%20"
+        urlChunk2 = "!5e0!3m2!1sen!2sin!4v1720809745055!5m2!1sen!2sin"
+        url = urlChunk1 + location + urlChunk2
+        var iframe = document.getElementById("dynamicIFrame");
+        iframe.src = url;
+    })
+
+    var iframe = document.getElementById("dynamicIFrame");
+    urlChunk1 = "https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d17556611.073370297!2d71.74357356053582!3d21.97970985160278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1shospitals%20at%20"
+    urlChunk2 = "!5e0!3m2!1sen!2sin!4v1720809745055!5m2!1sen!2sin"
+    url = urlChunk1 + "delhi" + urlChunk2
+    iframe.src = url;
+
+    // Get the username from the URL query parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    const username = urlParams.get('username');
+    backBut = document.getElementById("back");
+
+    chunk1 = "../next.html?username="
+    locat = chunk1 + username
+    backBut.href = locat;
+
+</script>
+<style>
+    .content{
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 25px;
+        word-wrap: break-word;
+    }
+    .heading{
+        font-size: 40px;
+        text-align: center;
+        color: darkgoldenrod;
+    }
+    .Location{
+        width: 100%;
+        border-left: 0;
+        border-top: 0;
+        border-right: 0;
+        border-bottom: 1px solid #999;
+        outline: none;
+        background: transparent;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 25px;
+    }
+</style>
+</html>

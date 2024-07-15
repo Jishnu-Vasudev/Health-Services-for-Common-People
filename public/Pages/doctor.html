@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consult a Doctor</title>
+</head>
+<body>
+    <h1 class="header">
+        Consult a Doctor
+    </h1>
+    <a id="back">Back</a>
+    <main>
+        <section class="description">
+            <p>Welcome to our Consult a Doctor page. Here you can find various online services that allow you to consult with healthcare professionals from the comfort of your home.</p>
+        </section>
+        <section class="links">
+            <h2 class = "labelH">Online Consultation Services</h2>
+            <table>
+                <tr>
+                    <th>Service</th>
+                    <th>Description</th>
+                    <th>Link</th>
+                </tr>
+                <tr>
+                    <td>Sprint Medical</td>
+                    <td>Consult with doctor online about your health, 24*7 Free live chat</td>
+                    <td><a href="https://sprintmedical.in/chat-with-doctor-online/" target="_blank" onclick="openInNewTab('https://sprintmedical.in/chat-with-doctor-online/')">Visit Sprint Medical</a></td>
+                </tr>
+                <tr>
+                    <td>Practo</td>
+                    <td>Skip the travel! Take Online Doctor Consultation.Private consultation + Audio call · Starts at just ₹199</td>
+                    <td><a href="https://www.practo.com/consult/" target="_blank" onclick="openInNewTab('https://www.practo.com/consult/')">Visit Practo</a></td>
+                </tr>
+                <tr>
+                    <td>icliniq</td>
+                    <td>Consult top doctors effortlessly.Get 24/7 online consultations with the best doctors without breaking a sweat and your bank.</td>
+                    <td><a href="https://www.icliniq.com/en_IN/" target="_blank" onclick="openInNewTab('https://www.icliniq.com/en_IN/')">Visit icliniq</a></td>
+                </tr>
+                <tr>
+                    <td>MediBuddy</td>
+                    <td>Offers virtual visits with board-certified doctors via phone or video.</td>
+                    <td><a href="https://www.medibuddy.in/doctors/online-consultation/" target="_blank" onclick="openInNewTab('https://www.medibuddy.in/doctors/online-consultation/')">Visit Medibuddy</a></td>
+                </tr>
+            </table>
+        </section>
+    </main>
+</body>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        color: #333;
+    }
+    .header {
+        font-size: 40px;
+        text-align: center;
+        color: darkgoldenrod;
+    }
+    .description {
+        margin-left: 20px;
+        font-size: 20px;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 2rem;
+    }
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+    th {
+        background-color: #3c87e4;
+        color: white;
+    }
+    .labelH{
+        font-size: 25px;
+        font-family: 'Courier New', Courier, monospace;
+        text-align: center;
+        text-decoration: underline;
+        color: rgb(119, 111, 232);
+    }
+    #back{
+        margin-left: 20px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+</style>
+<script>
+    function openInNewTab(url) {
+        window.open(url);
+    }
+    // Get the username from the URL query parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    const username = urlParams.get('username');
+    backBut = document.getElementById("back");
+    chunk1 = "../next.html?username="
+    locat = chunk1 + username
+    backBut.href = locat;
+</script>
+</html>

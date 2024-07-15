@@ -1,0 +1,48 @@
+<!-- public/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="./static/login style/style.css">
+</head>
+<body>
+  <div class="hero">
+    <div class="form-box">
+      <div class="button-box">
+        <div id="btn"></div>
+          <button type="button" class="toggle-btn" onclick="login()">Log In</button>
+          <button type="button" class="toggle-btn" onclick="register()">Sign Up</button>
+      </div>
+      <form class="input-group" id="login">
+        <input type="text" class="input-field" placeholder="Username" id="username-boxl" maxlength=50, minlength=3 required>
+        <input type="password" class="input-field" placeholder="Password" id="password-boxl" max=9999999999, min=100000 required>
+        <button type="submit" class="submit-btn" id="loginsubmit">Submit</button>
+      </form>
+      <form class="input-group" id="register">
+        <input type="text" class="input-field" placeholder="Username" id="username-boxr" maxlength=50, minlength=3 required>
+        <input type="password" class="input-field" placeholder="Password" id="password-boxr" max=9999999999, min=100000 required>
+        <button type="submit" class="submit-btn" id="registersubmit">Submit</button>
+      </form>
+    </div> 
+  </div>
+  <script src="main.js"></script>
+  <script>
+    var x = document.getElementById("login");
+    var y = document.getElementById("register");
+    var z = document.getElementById("btn");
+
+    function register(){
+      x.style.left = "-400px";
+      y.style.left = "50px";
+      z.style.left = "110px";
+    }
+    function login(){
+      x.style.left = "50px";
+      y.style.left = "450px";
+      z.style.left = "0px";
+    }
+  </script>
+</body>
+</html>

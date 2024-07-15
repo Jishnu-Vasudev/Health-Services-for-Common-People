@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Services</title>
+    <link rel="stylesheet" href="./static/health_style.css">
+</head>
+<body>
+    <div class="header">
+        <h1 class="heading">HEALTH SERVICES</h1>
+        <button class = "logoutButton" id="logoutButton">Logout</button>
+        <h1 class="message">Welcome, <span id="welcome-message">GUEST</span>!</h1>
+        <div class="services">
+            <div class="grid-item a" id="square1" href="./Pages/hospitals" onclick = "onClickHospital()"></div>
+            <div class="grid-item b" id="square2" href = "./Pages/pharmacies" onclick = "onClickPharmacy()"></div>
+            <div class="grid-item e" id="square5" onclick = "onClickTrans()"></div>
+            <h1 class="label">Nearby Hospitals</h1>
+            <h1 class="label">Nearby Pharmacies</h1>
+            <h1 class="label">Translator</h1>
+            <div class="grid-item c" id="square3" href="./Pages/doctors" onclick = "onClickDoctor()"></div>
+            <div class="grid-item d" id="square4" href="./Pages/medicines" onclick = "onClickOrderMedicine()"></div>
+            <div class="grid-item f" id="square6" onclick = "onClickInsure()"></div>
+            <h1 class="label">Consult a doctor</h1>
+            <h1 class="label">Order Medicines</h1>
+            <h1 class="label">Health Insurance</h1>
+        </div>
+        <div class="About">
+            <h1 class="abtlabel">About</h1>
+            <p class = "abtcontent">
+            Welcome to our Health Service Website, your destination for your healthcare
+            needs. Our platform offers a range of services to ensure you receive the best care possible. 
+            Easily locate nearby hospitals and pharmacies, access translation services through Google 
+            Translate, explore various health insurance options, consult with doctors, and order 
+            medications—all from the comfort of your home. Please note that some services will redirect 
+            you to external websites. Our website is created for educational purposes, providing useful 
+            and relevant healthcare information and resources.
+            Team:
+            <li class="member">Diya Mathews</li>
+            <li class="member">EV Jishnu</li>
+            <li class="member">Nayana Anna Binu</li>
+            <li class="member">Henok Anil Anton</li>
+            </p>
+        </div>
+    </div>
+    <script>
+        // Function to prevent going back to the previous page
+        function preventBack() {
+            window.history.pushState(null, "", window.location.href);
+            window.onpopstate = function() {
+                window.history.pushState(null, "", window.location.href);
+            };
+        }
+
+        // Call the preventBack function to disable the back button
+        preventBack();
+
+         // Alternatively, handle the popstate event for better reliability
+         window.addEventListener('popstate', function (event) {
+            fetch('/session-status')
+                .then(response => response.json())
+                .then(data => {
+                    if (!data.loggedIn) {
+                        window.location.href = '/';
+                    }
+                });
+        });
+
+        document.getElementById('logoutButton').addEventListener('click', () => {
+            window.location.href = '/logout';
+        });
+
+        //`next.html?username=${encodeURIComponent(username)}`
+
+        // Get the username from the URL query parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const username = urlParams.get('username');
+
+        if (username) {
+            document.getElementById('welcome-message').textContent = username;
+        } else {
+            console.log('No username found');
+        }
+
+        function onClickHospital(){
+            window.location.href = `./Pages/hospitals.html?username=${encodeURIComponent(username)}`;
+        }
+
+        function onClickPharmacy(){
+            window.location.href = `./Pages/pharmacies.html?username=${encodeURIComponent(username)}`;;
+        }
+
+        function onClickOrderMedicine(){
+            window.location.href = `./Pages/order_medicine.html?username=${encodeURIComponent(username)}`;;
+        }
+
+        function onClickDoctor(){
+            window.location.href = `./Pages/doctor.html?username=${encodeURIComponent(username)}`;;
+        }  
+
+        function onClickTrans(){
+            window.open("https://translate.google.co.in/?sl=auto&tl=en&op=translate");
+        }  
+
+        function onClickInsure(){
+            window.location.href = `./Pages/insurance.html?username=${encodeURIComponent(username)}`;;
+        }  
+    </script>
+</body>
+<footer>
+    <br>
+    <p class="footerN">Health Service 2024; OpenSource: No rights owned</p>
+    
+</footer>
+</html>
