@@ -35,4 +35,6 @@
 - In conclusion, our project 'Integrated Common Services for Common People' has successfully created a unified platform, that streamlines access to essential health services. 
 Our team's collaborative efforts have resulted in a user-friendly web application that addresses the needs of individuals in a new environment.
 We believe our project will have a positive impact on people's lives and look forward to its future development and implementation.
+## Note
+- Please use initialise Node.JS and install some neccessary packages before using the projects for smooth working.
 
