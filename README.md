@@ -1,8 +1,8 @@
 # Health-Services-for-Common-People
 - Made in association with Intel Unnati Industrial Training Projectm
-**Group Name** : BetaNexus
-**Group Members** : EV Jishnu, Diya Mathews, Nayana Anna Binu, Henok Anil Anton
-**Problem Statement** : Problem Statement 2 - Integrated Common Services to Common People
+- **Group Name** : BetaNexus
+- **Group Members** : EV Jishnu, Diya Mathews, Nayana Anna Binu, Henok Anil Anton
+- **Problem Statement** : Problem Statement 2 - Integrated Common Services to Common People
   
 ## Unique Idea Brief (Solution)
 - We've developed a comprehensive web application that serves as a one-stop portal for health services, empowering individuals to effortlessly navigate to tailored solutions. By providing a user-friendly gateway to essential health resources, we aim to alleviate the stress of adapting to a new environment, making healthcare more accessible and convenient for all.
@@ -16,11 +16,12 @@
 - Access health insurance services from a list of data.
 
 ## Files Included
-
+![alt text](https://github.com/Jishnu-Vasudev/Health-Services-for-Common-People/blob/main/resources/1.png)
 ## Process Flow
-
+![alt text](https://github.com/Jishnu-Vasudev/Health-Services-for-Common-People/blob/main/resources/2.png)
 ## Architecture Diagram
-
+![alt text](https://github.com/Jishnu-Vasudev/Health-Services-for-Common-People/blob/main/resources/3.png)
+![alt text](https://github.com/Jishnu-Vasudev/Health-Services-for-Common-People/blob/main/resources/4.png)
 ## Technologies Used
 - Front End : HTML, CSS and Client Side Js
 - Backend : Server Side JS and Node.JS
